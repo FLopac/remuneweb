@@ -1,4 +1,2 @@
-<!-- /Contenido-->
-    </div>
 </body>
 </html>

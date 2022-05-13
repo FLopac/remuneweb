@@ -1,0 +1,10 @@
+.sidebar {
+    width: 15%;
+    position: fixed;
+}
+
+.sidebar .sidebar__icon {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
