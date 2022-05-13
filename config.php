@@ -1,4 +1,3 @@
 <?php
-    define ("urlsite","http://localhost/mvcapp/");
-
+    define ("urlsite","http://localhost/remuneweb/");
 ?>

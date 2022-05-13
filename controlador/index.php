@@ -25,7 +25,7 @@
             $data = "'".$nombre."',".$precio;
             $producto = new Modelo();
             $dato = $producto->insertar("productos",$data);
-            header("location:".urlsite);
+            header("location/vista/index.php");
         }
 
         // Editar
@@ -44,7 +44,7 @@
             $data = "nombre='".$nombre."',precio=".$precio;//aqui esta la onda, atento a las comillas
             $producto = new Modelo();
             $dato = $producto->actualizar("productos",$data,"id=".$id);
-            header("location:".urlsite);
+            header("/vista/index.php");
         }
         // Redireccionar a login
         static function loginIn(){
@@ -62,15 +62,17 @@
             if($user){
                 session_start();
                 $_SESSION['usuario'] = $user->usuario;
-                header("location:".urlsite);
+                require_once("vista/index.php");
+                //header("location:".urlsite);
             }else{
                 header("location:".urlsite);
-            } 
+            }
         }
 
         static function logout(){
+            session_unset();
             session_destroy();
-            require_once("vista/login.php");
+            header("location:".urlsite);
         }
 
     }

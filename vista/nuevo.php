@@ -1,4 +1,8 @@
 <?php
+    if(!isset($_SESSION['usuario'])){ 
+        require("../config.php");  
+        header("Location:".urlsite);
+    }
     require_once("layouts/header.php");
 ?>
 <h1 class="text-center">NUEVO</h1>
