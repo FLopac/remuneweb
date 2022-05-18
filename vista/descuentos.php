@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../vista/descuentos.php" class="nav-link active">
+                <a href="../vista/descuentos.php" class="nav-link active fw-bold" style="background-color: #00a8e3">
                     <i width="30" class="fa-solid fa-arrow-trend-down"></i>
                     Descuentos
                 </a>

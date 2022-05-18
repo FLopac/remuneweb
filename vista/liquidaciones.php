@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../vista/liquidaciones.php" class="nav-link active">
+                <a href="../vista/liquidaciones.php" class="nav-link active fw-bold" style="background-color: #00a8e3">
                     <i width="30" class="fa-solid fa-file-invoice-dollar"></i>
                     Liquidaciones
                 </a>

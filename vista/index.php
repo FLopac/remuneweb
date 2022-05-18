@@ -5,7 +5,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="../vista/index.php" class="nav-link link-dark active">
+                <a href="../vista/index.php" class="nav-link link-dark active fw-bold" style="background-color: #00a8e3">
                     <i width="30" class="fa-solid fa-house-chimney"></i>
                     Inicio
                 </a>
