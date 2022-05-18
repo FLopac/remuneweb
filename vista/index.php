@@ -3,10 +3,12 @@
         require("../config.php");  
         header("Location:".urlsite);
     }
+    
     require_once("layouts/header.php");
 ?>
 
     <a href="index.php?m=nuevo" class="btn">NUEVO</a>
+    <a href="index.php?m=liquidacion" class="btn">LIQUIDACION</a>
     <a href="index.php?m=logout" class="btn">CERRAR SESION</a>
     <h1>Hola <?php echo ($_SESSION['usuario'])?></h1>
     <table>
@@ -29,7 +31,7 @@
                             <td><?php echo $v['precio']?></td>
                             <td>
                                 <a class="btn" href="index.php?m=editar&id=<?php echo $v['id']?>">EDITAR</a>
-                                <a class="btn" href="index.php?m=eliminar&id=<?php echo $v['id']?>">ELIMINAR</a>
+                                <a class="btn" onclick="return confirm('Esta seguro que desea eliminar el producto?')" href="index.php?m=eliminar&id=<?php echo $v['id']?>">ELIMINAR</a>
                             </td>
                         </tr>
 

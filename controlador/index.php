@@ -25,7 +25,8 @@
             $data = "'".$nombre."',".$precio;
             $producto = new Modelo();
             $dato = $producto->insertar("productos",$data);
-            header("location/vista/index.php");
+            header("location:".urlsite);
+            //header("location/vista/index.php");
         }
 
         // Editar
@@ -44,7 +45,8 @@
             $data = "nombre='".$nombre."',precio=".$precio;//aqui esta la onda, atento a las comillas
             $producto = new Modelo();
             $dato = $producto->actualizar("productos",$data,"id=".$id);
-            header("/vista/index.php");
+            header("location:".urlsite);
+            //header("/vista/index.php");
         }
         // Redireccionar a login
         static function loginIn(){
@@ -62,8 +64,8 @@
             if($user){
                 session_start();
                 $_SESSION['usuario'] = $user->usuario;
-                require_once("vista/index.php");
-                //header("location:".urlsite);
+                //require_once("vista/index.php");
+                header("location:".urlsite);
             }else{
                 header("location:".urlsite);
             }
@@ -73,6 +75,14 @@
             session_unset();
             session_destroy();
             header("location:".urlsite);
+        }
+
+        static function eliminar(){
+            $id = $_REQUEST['id'];
+            $producto = new Modelo();
+            $dato = $producto->eliminar("productos","id=".$id);
+            header("location:".urlsite);
+            //require_once("vista/editar.php");
         }
 
     }
